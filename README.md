@@ -2,7 +2,7 @@
 
 A Streamlit app that compares a project's **cost of equity, cost of debt and WACC in USD and in the currency of any selected country**, built for Kellogg *International Finance* (Prof. Sergio Rebelo, 2026).
 
-**Live app:** _add your Streamlit URL here_
+**Live app:** https://vpipano-intl-cost-of-capital.streamlit.app/
 
 ## What it does
 - Pulls the latest data, with sources and dates shown, and a **🔄 Refresh data** button:
@@ -38,7 +38,7 @@ Assumptions: risk measured against the U.S. market; U.S. industry betas proxy fo
 Each source has a dated, labelled fallback: the Damodaran BBB spread for January 2026, OECD rates from the course slide (CTS 2026), and a Trading Economics snapshot taken 15 Nov 2026. Trading Economics loads its bond table with JavaScript; if the table isn't in the HTML, the app tries the country page and then the snapshot. Any value can be overwritten manually.
 
 ## Verification
-- `verification/independent_check.xlsx` recomputes everything with Excel formulas. It reproduces the course Colombia example (WACC 8.5265% USD / 16.0670% COP) and runs three checks:
+- `independent_check.xlsx` recomputes everything with Excel formulas. It reproduces the course Colombia example (WACC 8.5265% USD / 16.0670% COP) and runs three checks:
   1. Equal government yields → identical results in both currencies (spread override off).
   2. Zero debt → WACC = cost of equity.
   3. Overriding the foreign-currency spread leaves USD results unchanged.
